@@ -1,0 +1,9 @@
+*.wav
+*.mp3
+*.flac
+*.pt
+*.pth
+*.npy
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
