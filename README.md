@@ -1,4 +1,4 @@
-# 🎙️ Speech PA-2: Code-Switched (Hinglish) Transcription → Low-Resource Language Voice Cloning
+# Speech PA-2: Code-Switched (Hinglish) Transcription → Low-Resource Language Voice Cloning
 
 > **Programming Assignment 2 — Speech Understanding Course**  
 > End-to-end pipeline: Hinglish lecture audio → denoising → LID → ASR → IPA → Santhali translation → zero-shot TTS → adversarial robustness evaluation
@@ -120,7 +120,7 @@ Raw Lecture Audio (.wav)
 | RAM | ≥ 12 GB (T4 provides 15 GB) |
 | Disk | ≥ 10 GB free in `/content` |
 
-> ⚠️ **This notebook is designed to run on Google Colab with a T4 GPU.**  
+> **This notebook is designed to run on Google Colab with a T4 GPU.**  
 > Set: `Runtime → Change runtime type → GPU (T4)`
 
 ---
@@ -201,9 +201,7 @@ Cell 5   → Full evaluation summary + confusion matrix
 Cell 6   → Package outputs + download ZIP
 ```
 
-> 📌 **Cell 3.1** prompts you to upload a 60-second personal voice recording. If you skip the upload, a synthetic 60 s sinusoidal reference is used automatically.
-
-> 📌 **Cell 6** — change `ROLLNO = "YourRollNo"` to your actual roll number before running.
+> **Cell 3.1** prompts you to upload a 60-second personal voice recording. If you skip the upload, a synthetic 60 s sinusoidal reference is used automatically.
 
 ---
 
@@ -347,7 +345,6 @@ PA2_submission/
 └── README.md
 ```
 
-> ⚠️ Set `ROLLNO = "YourRollNo"` before running Cell 6.
 
 ---
 
