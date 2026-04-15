@@ -22,7 +22,6 @@
   - [Part V: Evaluation & Submission](#part-v-evaluation--submission)
 - [Evaluation Metrics & Targets](#evaluation-metrics--targets)
 - [Output Files](#output-files)
-- [Known Issues & Fixes](#known-issues--fixes)
 - [References](#references)
 
 ---
@@ -383,29 +382,6 @@ PA2_submission/
 | `figures/roc_antispoof.png` | Anti-spoofing ROC curve with EER marker |
 | `figures/fgsm_epsilon_snr.png` | Epsilon vs SNR plot for adversarial sweep |
 | `figures/lid_confusion_matrix.png` | Hindi / English LID confusion matrix |
-
----
-
-## Known Issues & Fixes
-
-This notebook contains **14 documented bug fixes** from the original submission:
-
-| Cell | Bug | Fix Applied |
-|------|-----|-------------|
-| 0.1 | Missing `fastdtw` install caused NameError in Cell 3.4 | Moved to Cell 0.1 |
-| 0.2 | `gdown` failed on shared folder URL | Added `fuzzy=True` flag |
-| 0.3 | `librosa.display` not imported | Explicit `import librosa.display` |
-| 1.1 | DeepFilterNet requires Rust compiler (unavailable in Colab) | Replaced with `noisereduce` |
-| 1.2 | `device` undefined in cell scope | Added global `device` declaration |
-| 1.2 | `Wav2Vec2FeatureExtractor` vs `Wav2Vec2Processor` inconsistency | Unified to `Wav2Vec2Processor` |
-| 1.2 | `lid_results`, `predicted`, `ground_truth`, `f1` not exported as globals | Saved as module-level globals |
-| 1.3 | `NgramLM.train()` body truncated in uploaded version | Fully restored |
-| 1.4 | `mean_err` used before assignment when `errors_ms` is empty | Wrapped in `if errors_ms:` guard |
-| 3.1 | `files.upload()` MessageError not caught defensively | Broader try/except with synthetic fallback |
-| 3.2 | `dtw()` treated as function; it is a class | Use `DTW(...)` instance with `.distance`/`.index1` attributes |
-| 3.3 | `tts.languages` attribute raises AttributeError | Wrapped in `getattr` |
-| 3.3 | `OUTPUT_SYNTHESIS_PATH` defined inside conditional block | Moved to cell top-level |
-| 4.2 | `requires_grad_(True)` inside `torch.no_grad()` silently does nothing | Replaced with `torch.enable_grad()` scope |
 
 ---
 
